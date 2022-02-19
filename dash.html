@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="index.js"></script>
+</head>
+
+<body>
+  <section class="container">
+    <div class="table table-responsive">
+      <table class="table table-responsive table-striped table-bordered">
+        <thead >
+          <tr>
+           
+            <td id="username">Platform</td>
+            <td id="password">Password</td>
+         
+          </tr>
+        </thead>
+        
+        <tbody id="TextBoxContainer" method="POST" action="/"> </tbody>
+        <tfoot>
+          <tr>
+            <th colspan="5">
+              <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip"
+                data-original-title="Add more controls">
+                <i class="glyphicon glyphicon-plus-sign"></i>&nbsp; Add&nbsp;
+              </button>
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script>
+    $(function () {
+      $("#btnAdd").bind("click", function () {
+        var div = $("<tr />");
+        div.html(GetDynamicTextBox(""));
+        $("#TextBoxContainer").append(div);
+      });
+      $("body").on("click", ".remove", function () {
+        $(this).closest("tr").remove();
+      });
+    });
+    function GetDynamicTextBox(value) {
+      return ('<form>'+
+      
+        '<td><input id = "username" name = "DynamicTextBox" type="text" value = "' +
+        value +
+        '" class="form-control" /></td>' +
+        '<td><input id = "username" name = "DynamicTextBox" type="text" value = "' +
+        value +
+        '" class="form-control" /></td>' +
+        '<td><button type="button" class="btn btn-danger submit" id ="submit" onclick="Function()" >submit</button></td>' +
+        '<td><button type="button" class="btn btn-danger remove">delete</button></td>'+'</form>'
+      );
+    }
+  </script>
+</body>
+
+</html>
