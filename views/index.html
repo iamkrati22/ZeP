@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
-    <title>Document</title>
+    <title>Save your Passwords</title>
 </head>
 <body>
     <h2>HomePage</h2>
@@ -14,52 +14,17 @@
     <script src="../clientApp.js"></script>
     <h2>HTML Forms</h2>
 <div class="container">
-<form method="POST" action="/home/files" class="addinputs x">
-  <label for="username">Username:</label>
+<form method="POST" action="/home/files" class="addinputs x" id="form">
+  <label for="username">Platform:</label>
   <input type="text" id="username" name="username">
   <label for="password">Password:</label>
   <input type="text" id="password" name="password">
-  
-
- 
-  <button id = "btnDelete" class = "delete" onclick="DeleteComp()">Delete</button>
-  <button id = "btnAdd">Add</button> 
   <button id = "submit" onclick="Function()">Submit</button>
 </form> 
-  
 </div>
 <form method = "POST" action = "/files">
   <a href = "/ABCD">View</a>
 </form>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script>
-    $(function () {
-      $("#btnAdd").bind("click", function () {
-        var div = $('<form method = "POST" actions = "/home/files"/>');
-        div.html(GetDynamicTextBox(""));
-        $(".container").append(div);
-      });
-      $("#btnDelete").on("click", ".delete", function () {
-        $(this).closest(".x").remove();
-      });
-    });
-    function GetDynamicTextBox(value) {
-      return ('<form method="POST" action="/home/files" class = "x">' +
-        '<label for="username">Username:</label>' +
-        '<input type="text" id="username" name="username">' +
-        value +
-        '<label for="password">Password:</label>'+
-  '<input type="text" id="password" name="password">' +
-      
-  '<button id = "submit">Submit</button>'+
-  '<button id = "btnDelete" class = "delete" onclick="DeleteComp()">Delete</button>'+ '</form>'
- 
-      );
-    }
-  </script>
-
 
 </body>
 
