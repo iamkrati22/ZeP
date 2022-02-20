@@ -2,29 +2,30 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
+
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="index.js"></script>
-  <link rel="stylesheet" href="./style.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Pacifico&family=Quicksand:wght@300&display=swap"
     rel="stylesheet" />
   <title>Document</title>
-=======
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Save your Passwords</title>
->>>>>>> 0a892d06b51e7fc6826311dd20848d2e9efca144
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js"></script>
+  <title>Save your Passwords</title>
+  <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-<<<<<<< HEAD
+
   <script defer src="../index.js"></script>
   <script src="../sharedModule.js"></script>
   <script src="../clientApp.js"></script>
@@ -38,25 +39,7 @@
         <img src="../images/logo.png" alt="" class="logo-img" />
         <div class="lg">No-Pass</div>
       </div>
-=======
-    <h2>HomePage</h2>
-    <script defer src="../index.js"></script>
-    <script src="../sharedModule.js"></script>
-    <script src="../clientApp.js"></script>
-    <h2>HTML Forms</h2>
-<div class="container">
-<form method="POST" action="/home/files" class="addinputs x" id="form">
-  <label for="username">Platform:</label>
-  <input type="text" id="username" name="username">
-  <label for="password">Password:</label>
-  <input type="text" id="password" name="password">
-  <button id = "submit" onclick="Function()">Submit</button>
-</form> 
-</div>
-<form method = "POST" action = "/files">
-  <a href = "/ABCD">View</a>
-</form>
->>>>>>> 0a892d06b51e7fc6826311dd20848d2e9efca144
+
 
       <!-- Navbar Links -->
       <ul id="menu">
@@ -76,20 +59,30 @@
   <div class="main-container">
     <div class="about-us">
       <p class="about-hd">What makes us <span>different?</span> </p>
-      <p class="about-p">A large number of websites providing users with various services have popped up on the internet in today's time, and this has radically changed the landscape of today's online ecosystem. Every service has made it's own authentication and hence, a new password. Having so many such authentication services running on the net has a large amount of problems, all related from the smallest remembrance of passwords to the security level of a user's password.
-        Our app being presented here is a Password Manager tool for users that saves their passwords securely and reveals them to the user whenever they want to. It uses Express and Node, along with HTML, CSS and lots of JavaScript as the base tech stack. We use FileCoin (by Protocol Labs) as a Blockchain based decentralized database for storing user passwords. This is a much better way for storing the passwords since we don't need to maintain a central server for storing a user's passwords. This also eliminates any chances of a major server attack being performed which leaks any data, since the data isn't stored at a single space but rather distributed over a large decentralized network. 
-      
+      <p class="about-p">A large number of websites providing users with various services have popped up on the internet
+        in today's time, and this has radically changed the landscape of today's online ecosystem. Every service has
+        made it's own authentication and hence, a new password. Having so many such authentication services running on
+        the net has a large amount of problems, all related from the smallest remembrance of passwords to the security
+        level of a user's password.
+        Our app being presented here is a Password Manager tool for users that saves their passwords securely and
+        reveals them to the user whenever they want to. It uses Express and Node, along with HTML, CSS and lots of
+        JavaScript as the base tech stack. We use FileCoin (by Protocol Labs) as a Blockchain based decentralized
+        database for storing user passwords. This is a much better way for storing the passwords since we don't need to
+        maintain a central server for storing a user's passwords. This also eliminates any chances of a major server
+        attack being performed which leaks any data, since the data isn't stored at a single space but rather
+        distributed over a large decentralized network.
+
       </p>
     </div>
     <div class="container">
       <p>Save Passwords</p>
-      <form method="POST" action="/home/files" class="addinputs x" id="form">
-        
+      <form method="POST" action="/home/files" id="form">
+
         <div class="un">
           <label for="username">Platform</label><br>
           <input type="text" id="username" name="username" />
         </div>
-       
+
         <div class="un">
           <label for="password">Password</label><br>
           <input type="password" id="password" name="password" />
@@ -99,13 +92,213 @@
         </div>
       </form>
       <form method="POST" action="/files">
-        <button id = "view"><a href="/ABCD">View -></a></button>
+        <button id="view"><a href="/ABCD">View -></a></button>
       </form>
     </div>
   </div>
   <div class="footer">
     <div>Made with <span>&hearts;</span> by nak915 and iamkrati22</div>
   </div>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    background-color: black;
+    font-family: 'EB Garamond', serif;
+    
+}
+/*font-family: 'EB Garamond', serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Quicksand', sans-serif;*/
+a {
+    color:white;
+    text-decoration: none;
+    font-size: 17px;
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    justify-content: space-between;
+    background-color: black;
+    
+    height: 10vh;
+}
+.logo{
+    font-family: 'EB Garamond', serif;
+    color: #00FFC5;
+    margin-left: 10px;
+    flex:2;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    font-size: 27px !important;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.lg{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.logo-img{
+    height: 50px;
+}
+#menu{
+    margin-top: auto;
+    margin-bottom: auto;
+    flex:1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#menu a:hover{
+    color: #00FFC5;
+    transition:color 0.2s ease-in ;
+}
+.main-container{
+    
+    padding-top: 50px;
+    width: 80%;
+    height: 75vh;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.about-us{
+    color: white;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+        backdrop-filter: blur(16px) saturate(180%);
+        -webkit-backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.75);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.125);
+    
+}
+.about-hd{
+    font-family: 'EB Garamond', serif;
+    font-size: 55px;
+    margin: 10px 15px;
+}
+.about-hd span{
+    color: #00FFC5;
+}
+.about-p{
+    font-size: 17px;
+    margin:0px 25px;
+}
+.container{
+   margin-left: 20px;
+    flex:0.9;
+    display: flex;
+    flex-direction: column;
+   
+    color: white;
+    justify-content: center;
+    border: 1px solid #14a583;
+    border-radius: 5px;
+   
+}
+.container p{
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+}
+.container form{
+    margin-left: auto;
+    margin-right: auto;
+}
+.un{
+    
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+#password{
+    border: 1px solid #22222e;
+}
+#password:hover{
+    border: 1px solid #00FFC5;
+    transition: border 0.5s ease-in;
+}
+#username{
+    border: 1px solid #22222e;
+}
+#username:hover{
+    border: 1px solid #00FFC5;
+    transition: border 0.5s ease-in;
+}
+#submit{
+    margin-top: 10px;
+    color: white;
+    width: 120px;
+    height: 30px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: #18cca2;
+}
+#submit:hover{
+    background-color: #14a583;
+    cursor: pointer;
+    transform: translateY(0.5px);
+    transition: background-color 0.5s ease-out;
+}
+#view{
+    border:none;
+    margin-top: 5px;
+    font-size: 20px;
+}
+#view a{
+   color: #00FFC5;
+   
+}
+form input{
+    color: #14a583;
+    font-size: 20px;
+}
+#password{
+    background-color: black;
+    color: #14a583;
+}
+#view :hover{
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.5s ease-out;
+}
+
+.btn{
+  
+    margin: 5px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer{
+    height: 10vh;
+    background-color: black;
+    font-family: 'EB Garamond', serif;
+    text-align: center;
+    font-size: 17px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer span{
+    color: #00FFC5;
+}
+</style>
 </body>
 
 </html>

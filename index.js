@@ -4,7 +4,8 @@ import { File } from 'web3.storage'
 import request from 'request'
 import { LocalStorage } from "node-localstorage";
 global.localStorage = new LocalStorage('./scratch');
-const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGVFNkMxNjFENWUyRkZmMEIxQUM0QzY1OTdmZkQzRTE3Yjg4NGIyNTYiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDUwNTIzOTAzMzYsIm5hbWUiOiJUcmFpbC0yIn0.PFnsHED6kjlHaIVFSE7Yc6tFmW5ktqelkuSDM7DuIZw";
+//const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGVFNkMxNjFENWUyRkZmMEIxQUM0QzY1OTdmZkQzRTE3Yjg4NGIyNTYiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDUwNTIzOTAzMzYsIm5hbWUiOiJUcmFpbC0yIn0.PFnsHED6kjlHaIVFSE7Yc6tFmW5ktqelkuSDM7DuIZw";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweGVFNkMxNjFENWUyRkZmMEIxQUM0QzY1OTdmZkQzRTE3Yjg4NGIyNTYiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NDUzMzUxNDY4NDQsIm5hbWUiOiJaZVAifQ.JME0EQJLJ4ODM1o0a4MKb-2R8SBWmhm5n6pJTrxUm8I";
 const client = new Web3Storage({ token });
 var myArray = [];
 localStorage.setItem('savedArray', myArray); 
@@ -28,10 +29,10 @@ app.get('/', function (req, res) {
   res.sendFile('./views/login.html', { root: __dirname });
 });
 app.post('/home', function (req, res) {
-  if(localStorage.getItem('logged') === "true")
-  res.sendFile('./views/index.html', { root: __dirname });
+  if(localStorage.getItem('logged') == 1)
+  res.sendFile('./views/error.html', { root: __dirname });
   else
-  res.send("Incorrect Password Entered");
+  res.sendFile('./views/index.html',{ root: __dirname });
 });
 app.post('/home/files', function (req, res) {
   console.log(req.body);
