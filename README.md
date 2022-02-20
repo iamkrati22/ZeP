@@ -31,3 +31,7 @@ When a user registers for the first time, his/her username is first stored along
 ## Miscellaneous
 We also used Git and GitHub to include version control in our application for future updations and current work. It helped us work together on the file even when we physically weren't together. GitHub stores all our files inside a Repository with applied version control, which can help revert the version if an issue is detected in a newer version. <br>
 Finally, we needed to host our website onto a data server. For this purpose, we had to upload all the data to a cloud hosting service by creating a VM on it and then hosting it all on a system. We have used DigitalOcean as our cloud service provider, it is a popular Cloud Hosting Service that helped us to create our VM, and then upload and run all the data on the Web server. <br>
+
+##### Resources - 
+1. [Extending Web Applications with a Lightweight Zero Knowledge Proof Authentication](https://dl.acm.org/doi/10.1145/1456223.1456241)
+2. [Web application authentication using ZKP and novel 6D chaotic system](https://www.researchgate.net/publication/349772516_Web_application_authentication_using_ZKP_and_novel_6D_chaotic_system)
