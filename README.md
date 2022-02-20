@@ -35,3 +35,4 @@ Finally, we needed to host our website onto a data server. For this purpose, we 
 ##### Resources - 
 1. [Extending Web Applications with a Lightweight Zero Knowledge Proof Authentication](https://dl.acm.org/doi/10.1145/1456223.1456241)
 2. [Web application authentication using ZKP and novel 6D chaotic system](https://www.researchgate.net/publication/349772516_Web_application_authentication_using_ZKP_and_novel_6D_chaotic_system)
+3. [Web3.Storage Docs](https://docs.web3.storage/)
