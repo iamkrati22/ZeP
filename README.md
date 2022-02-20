@@ -1,4 +1,4 @@
-# ZeP
+# NoPass
 A large number of websites providing users with various services have popped up on the internet in today's time, and this has radically changed the landscape of today's online ecosystem. Every service has made it's own authentication and hence, a new password. Having so many such authentication services running on the net has a large amount of problems, all related from the smallest remembrance of passwords to the security level of a user's password. <br>
 Our app being presented here is a Password Manager tool for users that saves their passwords securely and reveals them to the user whenever they want to.<br>
 ## Tech Stack 
