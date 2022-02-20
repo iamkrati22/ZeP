@@ -28,7 +28,10 @@ app.get('/', function (req, res) {
   res.sendFile('./views/login.html', { root: __dirname });
 });
 app.post('/home', function (req, res) {
+  if(localStorage.getItem('logged') === "true")
   res.sendFile('./views/index.html', { root: __dirname });
+  else
+  res.send("Incorrect Password Entered");
 });
 app.post('/home/files', function (req, res) {
   console.log(req.body);

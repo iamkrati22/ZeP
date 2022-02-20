@@ -4,6 +4,7 @@
 	<title>Slide Navbar</title>
 	<script src = "./client.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
    <script src = "./client.js"></script>
@@ -39,7 +40,7 @@
 	align-items: center;
 	min-height: 100vh;
 	font-family: 'Jost', sans-serif;
-	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+	background: linear-gradient(to bottom, #05040e, #0e0e16, #000000);
 }
 .main{
 	width: 350px;
@@ -87,7 +88,7 @@ button{
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: #573b8a;
+	background: #1a1919fa;
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
@@ -98,7 +99,7 @@ button{
 	cursor: pointer;
 }
 button:hover{
-	background: #6d44b8;
+	background: #141314;
 }
 .login{
 	height: 460px;
@@ -108,7 +109,7 @@ button:hover{
 	transition: .8s ease-in-out;
 }
 .login label{
-	color: #573b8a;
+	color: #0e0e16;
 	transform: scale(.6);
 }
 
@@ -125,7 +126,7 @@ button:hover{
     </style>
 	 
 	 <script >
-		 console.log("hello")
+		 var logged ="false";
 function doFunction(){
 var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
@@ -147,10 +148,15 @@ function test(test_pass){
 function runtest(){
     var enteredPass = document.getElementById("inputPass").value;
     var enteredEmail = document.getElementById("inputEmail").value;
-    if(test(enteredPass) == localStorage.getItem('result'))
-    alert("correct Pass");
-    else
+    if((enteredEmailtest === email) && (enteredPass == localStorage.getItem('result'))){
+    logged=true;
+	alert("correct Pass");
+	localStorage.setItem('logged',"true");
+	}
+    else{
+	localStorage.setItem('logged',"false");
     alert("Incorrect email or password");
+	}
 
 }
 	 </script>

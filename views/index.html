@@ -1,69 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="index.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Pacifico&family=Quicksand:wght@300&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
 </head>
+
 <body>
-    <h2>HomePage</h2>
-    <script defer src="../index.js"></script>
-    <script src="../sharedModule.js"></script>
-    <script src="../clientApp.js"></script>
-    <h2>HTML Forms</h2>
-<div class="container">
-<form method="POST" action="/home/files" class="addinputs x1">
-  <label for="username">Username:</label>
-  <input type="text" id="username" name="username">
-  <label for="password">Password:</label>
-  <input type="text" id="password" name="password">
-  
+  <script defer src="../index.js"></script>
+  <script src="../sharedModule.js"></script>
+  <script src="../clientApp.js"></script>
 
- 
-  <button id = "btnDelete" class = "delete">Delete</button>
-  <button id = "btnAdd">Add</button> 
-  <button id = "submit" onclick="Function()">Submit</button>
-</form> 
-  
-</div>
-<form method = "POST" action = "/files">
-  <a href = "/ABCD">View</a>
-</form>
-<script src="https://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script>
-    var i=1;
-    $(function () {
-      $("#btnAdd").bind("click", function () {
-        var div = $(`<form method = "POST" actions = "/home" class="x${i}">`);
-        div.html(GetDynamicTextBox(""));
-        i++;
-        $(".container").append(div);
-      });
-      $("#btnDelete").on("click", ".delete", function () {
-        $(this).removeClass(`x${i}`);
-        i--;
-      });
-    });
-    function GetDynamicTextBox(value) {
-      return (`<form method="POST" action="/home/files" class="x${i}">` +
-        '<label for="username">Username:</label>' +
-        '<input type="text" id="username" name="username">' +
-        value +
-        '<label for="password">Password:</label>'+
-  '<input type="text" id="password" name="password">' +
+  <nav id="navbar" class="nav">
+    <div class="nav-bar">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+
+        <img src="../images/logo.png" alt="" class="logo-img" />
+        <div class="lg">No-Pass</div>
+      </div>
+
+      <!-- Navbar Links -->
+      <ul id="menu">
+        <li><a href="#home">Home</a></li>
+        <!--
+       -->
+        <li><a href="#services">Services</a></li>
+        <!--
+       -->
+        <li><a href="#about">About</a></li>
+        <!--
+       -->
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-container">
+    <div class="about-us">
+      <p class="about-hd">What makes us <span>different?</span> </p>
+      <p class="about-p">A large number of websites providing users with various services have popped up on the internet in today's time, and this has radically changed the landscape of today's online ecosystem. Every service has made it's own authentication and hence, a new password. Having so many such authentication services running on the net has a large amount of problems, all related from the smallest remembrance of passwords to the security level of a user's password.
+        Our app being presented here is a Password Manager tool for users that saves their passwords securely and reveals them to the user whenever they want to. It uses Express and Node, along with HTML, CSS and lots of JavaScript as the base tech stack. We use FileCoin (by Protocol Labs) as a Blockchain based decentralized database for storing user passwords. This is a much better way for storing the passwords since we don't need to maintain a central server for storing a user's passwords. This also eliminates any chances of a major server attack being performed which leaks any data, since the data isn't stored at a single space but rather distributed over a large decentralized network. 
       
-  '<button id = "submit">Submit</button>'+
-  '<button id = "btnDelete" class = "delete">Delete</button>'+ '</form>'
- 
-      );
-    }
-  </script>
-
-
+      </p>
+    </div>
+    <div class="container">
+      <p>Save Passwords</p>
+      <form method="POST" action="/home/files" class="addinputs x" id="form">
+        
+        <div class="un">
+          <label for="username">Platform</label><br>
+          <input type="text" id="username" name="username" />
+        </div>
+       
+        <div class="un">
+          <label for="password">Password</label><br>
+          <input type="password" id="password" name="password" />
+        </div>
+        <div class="btn">
+          <button id="submit" onclick="Function()">Submit</button>
+        </div>
+      </form>
+      <form method="POST" action="/files">
+        <button id = "view"><a href="/ABCD">View -></a></button>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div>Made with <span>&hearts;</span> by nak915 and iamkrati22</div>
+  </div>
 </body>
 
 </html>
